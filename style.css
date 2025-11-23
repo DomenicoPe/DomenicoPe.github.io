@@ -367,6 +367,17 @@ footer {
     .footer-content {
         flex-direction: column;
     }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .hero-buttons .btn-outline {
+        margin-left: 0;
+    }
 }
 
 /* Animations */
