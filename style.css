@@ -140,6 +140,13 @@ nav {
     opacity: 0.9;
 }
 
+.hero .hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: -1rem;
+    opacity: 0.8;
+}
+
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
