@@ -196,6 +196,17 @@ body {
     transition: var(--transition-smooth);
 }
 
+.logo-monogram {
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: -0.04em;
+    user-select: none;
+}
+
+.glass-header.scrolled .logo-monogram {
+    font-size: 0.8rem;
+}
+
 .logo-text {
     font-weight: 700;
     font-size: 0.95rem;
@@ -973,6 +984,10 @@ body {
     .glass-header.scrolled .logo-icon svg {
         width: 14px;
         height: 14px;
+    }
+
+    .glass-header.scrolled .logo-monogram {
+        font-size: 0.68rem;
     }
 
     .glass-header.scrolled .logo-text {
