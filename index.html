@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +9,16 @@
         content="Ing. Domenico Perrotti: Redazione Documento Valutazione Rischi (DVR) a Lucera e Foggia. Coordinatore Sicurezza CSP/CSE e Certificatore Energetico.">
     <meta name="keywords"
         content="Tecnici abilitati piani sicurezza Foggia, Ingegnere, Redazione POS Foggia, DVR Foggia, Coordinatore Sicurezza Foggia, Ing. Domenico Perrotti, Lucera, Sicurezza Cantieri">
+    <meta name="theme-color" content="#0066f5">
 
     <meta name="google-site-verification" content="3owK7jIBkP3UJEfsJWdLj-ApVMctesGj8ihE9ozPap8" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-    <link rel="manifest" href="/img/site.webmanifest" />
+
+    <!-- Favicon Originali del sito -->
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="img/site.webmanifest" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://domenicope.github.io/">
@@ -39,22 +40,25 @@
         content="Ing. Domenico Perrotti: Redazione Documento Valutazione Rischi (DVR) a Lucera e Foggia. Coordinatore Sicurezza CSP/CSE e Certificatore Energetico.">
     <meta property="twitter:image" content="https://domenicope.github.io/img/profile.jpg">
 
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSP -->
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self';
-    style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
-    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
     img-src 'self' data:;
     form-action 'self' https://formspree.io;
     connect-src 'self' https://formspree.io;
     ">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -98,197 +102,501 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-hard-hat"></i> Ing. Domenico Perrotti
+    <!-- Sfondo fotografico cantiere originale sempre visibile e fisso con overlay di profondità -->
+    <div class="bg-fixed"></div>
+    <div class="bg-overlay"></div>
+
+    <!-- Floating Glass Header (Apple/Revolut island style con shrink dinamico) -->
+    <header class="glass-header">
+        <nav class="nav-container">
+            <div class="brand-logo">
+                <span class="logo-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 18h20"></path>
+                        <path d="M4 18v-2a8 8 0 0 1 16 0v2"></path>
+                        <path d="M9 10a3 3 0 0 1 6 0"></path>
+                    </svg>
+                </span>
+                <span class="logo-text">Ing. Domenico Perrotti</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#chi-sono">Chi Sono</a></li>
-                <li><a href="#servizi">Servizi</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+
+            <div class="nav-menu">
+                <a href="#chi-sono" class="nav-link">Chi Sono</a>
+                <a href="#servizi" class="nav-link">Servizi</a>
+                <a href="#contatti" class="nav-link">Contatti</a>
+            </div>
+
+            <div class="nav-cta">
+                <a href="#contatti" class="btn btn-sm btn-primary">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Preventivo</span>
+                </a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Ing. Domenico Perrotti</h1>
-            <h2>Sicurezza sul Lavoro e DVR a Lucera e Foggia</h2>
-            <p class="hero-subtitle">Coordinatore Sicurezza (CSP/CSE) & Ingegnere dell'Informazione iscritto all'Ordine
-                degli Ingegneri di Foggia Nr. 3577</p>
-            <div class="hero-buttons">
-                <a href="#contatti" class="btn">Richiedi Preventivo</a>
-                <a href="#servizi" class="btn btn-outline">I Miei Servizi</a>
+    <main class="main-wrapper">
+        <!-- Hero Section Glass Card -->
+        <section id="home" class="hero-section glass-card">
+            <div class="pill-badge">
+                <span class="badge-dot"></span>
+                <span>Ordine Ingegneri di Foggia Nr. 3577 · Sez. A (Senior)</span>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="chi-sono">
-        <div class="section-title">
-            <h2>Chi Sono</h2>
-            <p>Professionalità tecnica e competenza normativa al tuo servizio.</p>
-        </div>
-        <div class="about-content">
-            <div class="about-image">
-                <picture>
-                    <source srcset="img/profile.webp" type="image/webp">
-                    <img src="img/profile.jpg" alt="Ing. Domenico Perrotti">
-                </picture>
-            </div>
-            <div class="about-text">
-                <h3>Profilo Professionale</h3>
-                <p>Sono Domenico Perrotti, <strong>tecnico abilitato a Lucera</strong> e Ingegnere iscritto all'Ordine
-                    della provincia di Foggia (Nr. 3577). Opero come Coordinatore per la Sicurezza nei cantieri
-                    temporanei e mobili (CSP/CSE), offrendo competenza e affidabilità.</p>
-                <p>Specializzato nella consulenza per la sicurezza aziendale, mi occupo della redazione di <strong>DVR a
-                        Lucera</strong> e <strong>DVR a Foggia</strong>, supportando le imprese nel rispetto degli
-                    obblighi normativi (D.Lgs 81/08). La mia formazione accademica (Laurea Magistrale con lode in
-                    Computer Science) mi permette di unire rigore ingegneristico e gestione pratica.</p>
-                <p>Oltre alla sicurezza, sono attivo come <strong>Certificatore Energetico</strong> e
-                    <strong>Amministratore di Condominio</strong>, garantendo un servizio tecnico completo e integrato.
-                </p>
-                <ul class="about-list">
-                    <li><i class="fas fa-check-circle icon-check"></i> Abilitazione Coordinatore Sicurezza (CSP/CSE)
-                    </li>
-                    <li><i class="fas fa-check-circle icon-check"></i> Certificatore Energetico (APE)</li>
-                    <li><i class="fas fa-check-circle icon-check"></i> Ingegnere Senior - Settore Informazione</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <h1 class="hero-title">
+                Sicurezza sul Lavoro e Redazione DVR a Lucera e Foggia.
+            </h1>
 
-    <!-- Services Section -->
-    <section id="servizi" class="services">
-        <div class="section-title">
-            <h2>I Miei Servizi</h2>
-            <p>Consulenza tecnica integrata per edilizia e sicurezza.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
-                <h3>Coordinamento Sicurezza</h3>
-                <p>Assunzione incarico di Coordinatore in fase di Progettazione (CSP) ed Esecuzione (CSE) per cantieri
-                    temporanei e mobili.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-file-contract"></i></div>
-                <h3>Redazione POS & DVR</h3>
-                <p>Stesura Piani Operativi di Sicurezza (POS) per imprese e Documenti di Valutazione dei Rischi (DVR)
-                    aziendali.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-leaf"></i></div>
-                <h3>Certificazione Energetica</h3>
-                <p>Redazione e trasmissione di Attestati di Prestazione Energetica (APE) per immobili residenziali e
-                    commerciali.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-building"></i></div>
-                <h3>Amministrazione Condominiale</h3>
-                <p>Gestione tecnica e amministrativa di condominii con competenza e trasparenza professionale.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                <h3>Consulenza IT & Security</h3>
-                <p>Grazie alla specializzazione in Computer Science, offro consulenza su sicurezza dati (GDPR) e sistemi
-                    informativi.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
-                <h3>PIMUS & DUVRI</h3>
-                <p>Redazione piani per ponteggi (PIMUS) e valutazione rischi interferenti (DUVRI).</p>
-            </div>
-        </div>
-    </section>
+            <p class="hero-subtitle">
+                Coordinatore per la Sicurezza in fase di Progettazione ed Esecuzione (CSP/CSE), Certificatore Energetico e Ingegnere dell'Informazione con Laurea Magistrale con Lode in Computer Science.
+            </p>
 
-    <!-- Contact Section -->
-    <section id="contatti" class="contact">
-        <div class="section-title">
-            <h2>Contattami</h2>
-            <p>Disponibile per incarichi a Lucera, Foggia e provincia.</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <div>
-                        <h4>Email & PEC</h4>
-                        <p>Email: <a href="mailto:domenicoperrotti01@gmail.com">domenicoperrotti01@gmail.com</a></p>
-                        <p>PEC: <a href="mailto:domenico.perrotti@ingpec.eu">domenico.perrotti@ingpec.eu</a></p>
+            <div class="hero-actions">
+                <a href="#contatti" class="btn btn-lg btn-primary">
+                    <span>Richiedi un Preventivo</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#servizi" class="btn btn-lg btn-glass">
+                    <span>I Miei Servizi</span>
+                </a>
+            </div>
+
+            <!-- Quick Metrics / Highlights -->
+            <div class="metrics-grid">
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 18h20"></path>
+                            <path d="M4 18v-2a8 8 0 0 1 16 0v2"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">Cantieri CSP/CSE</span>
+                        <span class="metric-desc">Coordinamento e vigilanza</span>
                     </div>
                 </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                    <div>
-                        <h4>Telefono</h4>
-                        <p>+39 327 341 3623</p>
-                        <p>0881 373010</p>
+
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">POS, DVR & PIMUS</span>
+                        <span class="metric-desc">Stesura conforme D.Lgs 81/08</span>
                     </div>
                 </div>
-                <div class="contact-info-item">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div>
-                        <h4>Studio</h4>
-                        <p>Via Po, 90<br>71036 Lucera (FG)</p>
+
+                <div class="metric-card glass-card-nested">
+                    <div class="metric-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <span class="metric-val">APE & Consulenza IT</span>
+                        <span class="metric-desc">Certificatore ed Energy specialist</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <form class="contact-form" action="https://formspree.io/f/xnnkkzyp" method="post">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Messaggio</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Invia Messaggio</button>
-            </form>
-        </div>
-    </section>
+        <!-- About Section (Apple Frosted Glass Profile) -->
+        <section id="chi-sono" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Profilo Professionale</span>
+                <h2 class="section-title">Chi Sono</h2>
+                <p class="section-desc">Competenza ingegneristica, precisione normativa e supporto operativo continuo.</p>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Ing. Domenico Perrotti</h4>
-                <p>Coordinatore Sicurezza, Certificatore Energetico e Ingegnere dell'Informazione.</p>
+            <div class="about-card glass-card">
+                <div class="about-layout">
+                    <div class="about-image-wrapper">
+                        <picture>
+                            <source srcset="img/profile.webp" type="image/webp">
+                            <img src="img/profile.jpg" alt="Ing. Domenico Perrotti" class="profile-img">
+                        </picture>
+                        <div class="profile-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Ingegnere Abilitato</span>
+                        </div>
+                    </div>
+
+                    <div class="about-text-content">
+                        <h3>Ing. Domenico Perrotti</h3>
+                        <p class="about-lead">
+                            Sono Domenico Perrotti, <strong>tecnico abilitato a Lucera</strong> e Ingegnere iscritto all'Ordine della provincia di Foggia (Nr. 3577). Opero come Coordinatore per la Sicurezza nei cantieri temporanei e mobili (CSP/CSE), offrendo competenza tecnica e tempestività.
+                        </p>
+                        <p>
+                            Specializzato nella consulenza per la sicurezza aziendale, mi occupo della redazione di <strong>DVR a Lucera</strong> e <strong>DVR a Foggia</strong>, supportando le imprese nel rigoroso rispetto degli obblighi normativi (D.Lgs 81/08). La mia formazione accademica (Laurea Magistrale con lode in Computer Science) mi permette di unire metodo analitico, sicurezza informatica e gestione pratica di cantiere.
+                        </p>
+                        <p>
+                            Oltre alla sicurezza, opero come <strong>Certificatore Energetico</strong> ed esercito l'attività di <strong>Amministratore di Condominio</strong>, garantendo un servizio tecnico completo, trasparente e integrato.
+                        </p>
+
+                        <div class="about-badges-grid">
+                            <div class="spec-pill">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Coordinatore Sicurezza (CSP/CSE)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Certificatore Energetico (APE)</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Ingegnere Senior — Settore Informazione</span>
+                            </div>
+                            <div class="spec-pill">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Amministratore di Condominio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Link Utili</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
+        </section>
+
+        <!-- Services Bento Grid -->
+        <section id="servizi" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Servizi Tecnici</span>
+                <h2 class="section-title">Consulenza Integrata per Edilizia e Sicurezza</h2>
+                <p class="section-desc">Interventi specialistici e adempimenti per imprese, professionisti e proprietari.</p>
             </div>
-            <div class="footer-col">
-                <h4>Dati Professionali</h4>
-                <p>Ordine Ingegneri Foggia Nr. 3577<br>
-                    Sezione A (Senior) - Settore Informazione</p>
+
+            <div class="bento-grid">
+                <!-- Bento Card 1: Coordinamento Sicurezza (Large) -->
+                <div class="bento-card bento-span-2 glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 18h20"></path>
+                            <path d="M4 18v-2a8 8 0 0 1 16 0v2"></path>
+                            <path d="M9 10a3 3 0 0 1 6 0"></path>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Coordinamento della Sicurezza (CSP / CSE)</h3>
+                        <p>
+                            Assunzione diretta dell'incarico di Coordinatore per la Sicurezza in fase di Progettazione (CSP) ed Esecuzione (CSE) nei cantieri temporanei e mobili, redazione PSC e fascicolo dell'opera secondo il D.Lgs 81/08.
+                        </p>
+                        <div class="bento-pills">
+                            <span class="feature-pill">Incarico CSP / CSE</span>
+                            <span class="feature-pill">Piani di Sicurezza e Coordinamento</span>
+                            <span class="feature-pill">Sopralluoghi in Cantiere</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: POS & DVR -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Redazione POS & DVR</h3>
+                        <p>
+                            Stesura Documenti di Valutazione dei Rischi (DVR) aziendali e Piani Operativi di Sicurezza (POS) personalizzati per imprese esecutrici.
+                        </p>
+                        <div class="bento-pills">
+                            <span class="feature-pill">DVR Lucera e Foggia</span>
+                            <span class="feature-pill">POS Cantieri</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: Certificazione Energetica -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Certificazione Energetica (APE)</h3>
+                        <p>
+                            Sopralluogo, redazione e registrazione telematica dell'Attestato di Prestazione Energetica (APE) per compravendite, locazioni e riqualificazioni immobiliari.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 4: Amministrazione Condominiale -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                            <line x1="15" y1="22" x2="15" y2="22.01"></line>
+                            <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                            <line x1="15" y1="6" x2="15" y2="6.01"></line>
+                            <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                            <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                            <line x1="9" y1="14" x2="9" y2="14.01"></line>
+                            <line x1="15" y1="14" x2="15" y2="14.01"></line>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Amministrazione Condominiale</h3>
+                        <p>
+                            Gestione tecnica e contabile dei fabbricati con rigore ingegneristico, trasparenza e costante controllo delle manutenzioni.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 5: PIMUS & DUVRI -->
+                <div class="bento-card glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 11 12 14 22 4"></polyline>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>PIMUS & DUVRI</h3>
+                        <p>
+                            Piani di montaggio, uso e smontaggio ponteggi (PIMUS) e Documenti di Valutazione Rischi da Interferenze (DUVRI).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Card 6: Consulenza IT & Cyber Security -->
+                <div class="bento-card bento-span-2 glass-card">
+                    <div class="bento-icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="bento-content">
+                        <h3>Consulenza IT, Privacy & Sicurezza Dati (GDPR)</h3>
+                        <p>
+                            Competenza avanzata in Computer Science: analisi dei sistemi informativi aziendali, implementazione policy di conformità GDPR e protezione dei dati digitali.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Ing. Domenico Perrotti. Tutti i diritti riservati.</p>
+        </section>
+
+        <!-- Contact Section (Revolut Style Card with Integrated Formspree Form) -->
+        <section id="contatti" class="content-section">
+            <div class="section-header">
+                <span class="section-tag">Contatti & Studio</span>
+                <h2 class="section-title">Richiedi un Preventivo o Informazioni</h2>
+                <p class="section-desc">Disponibile per incarichi e consulenze a Lucera, Foggia e in tutta la provincia.</p>
+            </div>
+
+            <div class="contact-card glass-card">
+                <div class="contact-layout">
+                    <!-- Left: Contact Details -->
+                    <div class="contact-details">
+                        <div class="company-badge-row">
+                            <span class="company-name">Ing. Domenico Perrotti</span>
+                            <span class="vat-badge">Ordine Ingegneri FG Nr. 3577</span>
+                        </div>
+
+                        <p class="company-intro">
+                            Contattami direttamente via email, PEC o telefono per fissare un sopralluogo tecnico o ricevere un preventivo dettagliato.
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Studio Professionale</span>
+                                    <span class="val">Via Po, 90 — 71036 Lucera (FG)</span>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('Via Po, 90, 71036 Lucera (FG)', this)" title="Copia indirizzo">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Recapiti Telefonici</span>
+                                    <span class="val"><a href="tel:3273413623" class="val-link">+39 327 341 3623</a> · <a href="tel:0881373010" class="val-link">0881 373010</a></span>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('+39 327 341 3623', this)" title="Copia Telefono">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Email Ordinaria</span>
+                                    <a href="mailto:domenicoperrotti01@gmail.com" class="val val-link">domenicoperrotti01@gmail.com</a>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('domenicoperrotti01@gmail.com', this)" title="Copia Email">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="label">Posta Elettronica Certificata (PEC)</span>
+                                    <a href="mailto:domenico.perrotti@ingpec.eu" class="val val-link">domenico.perrotti@ingpec.eu</a>
+                                </div>
+                                <button type="button" class="btn-copy" onclick="copyText('domenico.perrotti@ingpec.eu', this)" title="Copia PEC">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Formspree Contact Form -->
+                    <div class="contact-form-box glass-card-nested">
+                        <h3 class="form-title">Scrivi un Messaggio</h3>
+                        <p class="form-subtitle">Riceverai una risposta tecnica in tempi rapidi.</p>
+
+                        <form action="https://formspree.io/f/xnnkkzyp" method="post" class="glass-form">
+                            <div class="form-group">
+                                <label for="name">Nome e Cognome / Ragione Sociale</label>
+                                <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Indirizzo Email</label>
+                                <input type="email" id="email" name="email" placeholder="nome@esempio.it" required class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Descrizione dell'Incarico o Richiesta</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Descrivi il servizio richiesto (DVR, POS, APE, Condominio...)" required class="form-input form-textarea"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-block btn-primary">
+                                <span>Invia Messaggio</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Clean Apple-style Minimal Footer -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-text">Ing. Domenico Perrotti</span>
+                    <p class="footer-tagline">Coordinatore Sicurezza, Certificatore Energetico e Ingegnere dell'Informazione</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#chi-sono">Chi Sono</a>
+                    <a href="#servizi">Servizi</a>
+                    <a href="#contatti">Contatti</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Ing. Domenico Perrotti — Tutti i diritti riservati.</p>
+                <p class="footer-legal">Ordine Ingegneri Foggia Nr. 3577 · Sezione A (Senior) - Settore Informazione · Studio: Via Po, 90, 71036 Lucera (FG)</p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Toast Notification for Copy -->
+    <div id="toast" class="toast">Testo copiato negli appunti!</div>
+
+    <!-- Minimal Script (Vanilla JS - Zero Dependencies) -->
+    <script>
+        // Update Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Dynamic Header Shrink on Scroll (Apple-style)
+        const header = document.querySelector('.glass-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // Smooth Scroll maintaining clean URL without #hash
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Copy Helper
+        function copyText(text, btnElement) {
+            navigator.clipboard.writeText(text).then(function() {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+
+                if (btnElement) {
+                    btnElement.classList.add('copied');
+                    setTimeout(() => btnElement.classList.remove('copied'), 1500);
+                }
+            }).catch(function(err) {
+                console.error('Errore copia', err);
+            });
+        }
+    </script>
 </body>
-
-
 
 </html>
